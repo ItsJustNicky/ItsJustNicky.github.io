@@ -1,6 +1,8 @@
+/* General body styling for a dark, gothic theme */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Verdana', sans-serif; /* A cleaner, sharp font */
+    background-color: #1e1e1e; /* Dark background */
+    color: #f5f5f5; /* Light text */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,34 +10,43 @@ body {
     margin: 0;
 }
 
+/* Container styling for a more gothic look */
 .container {
-    background-color: white;
+    background-color: #2c2c2c; /* Darker container background */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Strong shadow for depth */
+    width: 100%;
+    max-width: 400px; /* Limit width for larger screens */
+    border: 2px solid #444; /* Subtle border for definition */
 }
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #bb86fc; /* Gothic purple for headers */
 }
 
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #f5f5f5; /* Light text for labels */
 }
 
-select {
+select, input[type="checkbox"] {
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     margin-bottom: 20px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    background-color: #333; /* Darker input backgrounds */
+    color: #f5f5f5; /* Light text for input fields */
+    border: 2px solid #555; /* Subtle border */
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 input[type="checkbox"] {
+    width: auto;
     margin-right: 10px;
 }
 
@@ -51,22 +62,44 @@ input[type="checkbox"] {
 }
 
 button {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
+    padding: 12px;
+    background-color: #bb86fc; /* Gothic purple for buttons */
+    color: #1e1e1e; /* Dark button text */
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #d68dfc; /* Lighter hover state */
 }
 
 button#add-task {
-    background-color: #007bff;
+    background-color: #03dac5; /* Gothic greenish cyan for task button */
 }
 
 button#add-task:hover {
-    background-color: #0056b3;
+    background-color: #03b5a2; /* Darker hover state for the task button */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    button, select, input[type="checkbox"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .things-to-do select {
+        margin-right: 5px;
+    }
 }
