@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,8 +8,8 @@ body {
     margin: 0;
 }
 
-.login-container {
-    background-color: #fff;
+.container {
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -23,28 +23,39 @@ h2 {
 
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="password"] {
+select {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.things-to-do {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.things-to-do select {
+    flex: 1;
+    margin-right: 10px;
 }
 
 button {
-    width: 100%;
     padding: 10px;
     background-color: #28a745;
-    border: none;
     color: white;
+    border: none;
     border-radius: 4px;
-    font-size: 16px;
     cursor: pointer;
 }
 
@@ -52,14 +63,10 @@ button:hover {
     background-color: #218838;
 }
 
-.newUser {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #007bff;
+button#add-task {
+    background-color: #007bff;
 }
 
-.newUser:hover {
-    text-decoration: underline;
+button#add-task:hover {
+    background-color: #0056b3;
 }
