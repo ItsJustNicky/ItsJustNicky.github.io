@@ -52,7 +52,7 @@ button:hover {
     background-color: #218838;
 }
 
-.forgot-password {
+.newUser {
     display: block;
     text-align: center;
     margin-top: 10px;
@@ -60,6 +60,6 @@ button:hover {
     color: #007bff;
 }
 
-.forgot-password:hover {
+.newUser:hover {
     text-decoration: underline;
 }
