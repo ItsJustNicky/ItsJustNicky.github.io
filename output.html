@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Mood and Activity</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="moodBox"></div>
+        <div class="box" id="dayBox"></div>
+        <div class="box" id="procrastinatingBox"></div>
+        <div class="box" id="stuffToDoBox"></div>
+        <div class="box" id="stuckBox"></div>
+    </div>
+
+    <script>
+        // Function to get query string parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                mood: params.get("mood"),
+                day: params.get("day"),
+                procrastinating: params.get("procrastinating"),
+                stuffToDo: params.get("stuffToDo"),
+                stuck: params.get("stuck")
+            };
+        }
+
+        // Get user inputs from the query string
+        const userData = getQueryParams();
+
+        // Display the inputs in the boxes
+        document.getElementById("moodBox").textContent = `Mood: ${userData.mood}`;
+        document.getElementById("dayBox").textContent = `Day: ${userData.day}`;
+        document.getElementById("procrastinatingBox").textContent = `Procrastinating: ${userData.procrastinating}`;
+        document.getElementById("stuffToDoBox").textContent = `Things to Do: ${userData.stuffToDo}`;
+        document.getElementById("stuckBox").textContent = `Stuck: ${userData.stuck}`;
+    </script>
+</body>
+</html>

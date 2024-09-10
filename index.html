@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whats Lotto doing?</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Link to external JavaScript file -->
 </head>
 <body>
     <div class="container">
         <h2>Mood and Activity Tracker</h2>
 
-        <form action="#" method="post">
+        <form id="moodForm" action="#" method="post">
             <!-- Mood selection -->
             <label for="mood">Select your mood:</label>
             <select id="mood" name="mood">
@@ -43,13 +44,13 @@
                 <input type="checkbox" id="stuffToDo" name="stuffToDo">
                 Do you have things to do?
             </label>
-                
-            <label for="stuck"></label>
+
+            <label for="stuck">
                 <input type="checkbox" id="stuck" name="stuck">
                 Are you stuck?
             </label>
-            <!-- Things to do dropdown and button -->
-            <label for="things">I need to do something!</label>
+
+            <!-- Submit button -->
             <button type="submit">What do?</button>
         </form>
     </div>
